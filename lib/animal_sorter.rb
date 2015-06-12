@@ -7,3 +7,16 @@
 # should include the sea creatures, the second, land animals.
 
 # Read the test suite for an example of a nested array.
+
+class AnimalSorter
+  LAND_ANIMALS = ["aardvark", "cat", "elephant"]
+  SEA_ANIMALS = ["marlin", "octopus", "fish"]
+
+  def initialize(animals)
+    @animals = animals
+  end
+
+  def to_a
+    @animals.partition{|animal| SEA_ANIMALS.include?(animal)}
+  end
+end
